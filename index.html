@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" />
+  <title>GB Vel and the Shami Secret: PS2 test</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game"></canvas>
+    <div id="hud"></div>
+    <div id="msg"></div>
+    <div id="pause-overlay">PAUSED</div>
+    <div id="title-overlay">
+      <h1>GB VEL AND THE SHAMI SECRET</h1>
+      <p>PS2 test — early-2000s look: smooth shading, soft shadows, bloom.<br/>
+      Drive off the rakshasas. Original models; era look only.</p>
+      <p class="hint">TAP / ENTER / Z TO START</p>
+      <p style="margin-top:12px;font-size:11px;opacity:.7">
+        Move: WASD / arrows &nbsp;·&nbsp; Attack: Z / J &nbsp;·&nbsp; Block: X / K &nbsp;·&nbsp; Pause: P
+      </p>
+    </div>
+    <div id="touch">
+      <div class="stick-zone">
+        <div class="stick-base"><div class="stick-knob"></div></div>
+      </div>
+      <div class="btn-col">
+        <div class="tbtn" id="btn-attack">ATTACK</div>
+        <div class="tbtn" id="btn-block">BLOCK</div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
