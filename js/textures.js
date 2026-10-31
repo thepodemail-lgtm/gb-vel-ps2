@@ -41,9 +41,11 @@ export function makeGrassTex() {
       ctx.fillStyle = Math.random() > 0.5 ? '#7a9a52' : '#5a7a3a';
       ctx.fillRect(x, y, 1 + Math.random() * 2, 2 + Math.random() * 4);
     }
-    ctx.globalAlpha = 0.15;
-    noise(ctx, s, 40, 0.4);
-    ctx.globalAlpha = 1;
+    /* Soft mottling without wiping the green (putImageData ignores globalAlpha). */
+    for (let i = 0; i < 200; i++) {
+      ctx.fillStyle = Math.random() > 0.5 ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+      ctx.fillRect(Math.random() * s, Math.random() * s, 4 + Math.random() * 10, 3 + Math.random() * 8);
+    }
   });
 }
 
